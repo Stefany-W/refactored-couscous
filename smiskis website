@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> This was supposed to be a serious website  </title> 
+<link rel="icon" type="image/png" href="https://i.ibb.co/MD0MCtch/image-removebg-preview-6.png">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+      body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: auto; 
+      padding-top: 80px; 
+      font-family: Georgia, monospace;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding-top: 150px;
+      min-height: 200vh;
+    }
+    
+    .main {
+      position: relative;
+      margin-top: 25px;
+      margin-left: 2%;
+      margin-right: auto;
+      background-color: rgba(10, 10, 10, 0.6);
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 780px;
+      width: 90%;    
+    }
+        
+        .barra-superior {position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #400;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+            z-index: 1000;}
+          
+            
+        body { 
+        }
+            
+        p {
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 14px;}
+        
+             h1,h2 {color: pink;}
+             p, li {color: gray;}
+            
+            ol.link-com-simbolo {
+            margin-bottom: 8px;
+            max-width: 780px;
+            font-weight: bold;
+    }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            overflow-x: hidden;}
+            
+        a {
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            transition: color 0.3s;
+        }    
+           @keyframes flutuar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .floating-icon1 {
+            display: inline-block;
+            margin-left: 120px;
+            width: 40px;
+            animation: flutuar 2s infinite ease-in-out;
+        }
+        .floating-icon2 {
+            display: inline-block;
+            margin-left: 30px;
+            width: 40px;
+            animation: flutuar 2s infinite ease-in-out;
+        }
+        .floating-icon3 {
+            display: inline-block;
+            margin-left: 103px;
+            width: 40px;
+            animation: flutuar 2s infinite ease-in-out;
+        }
+        
+
+          @keyframes flutuar {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0); }
+}
+          .small-icon {
+           animation: flutuar 3s infinite ease-in-out;
+}
+
+          @keyframes girar3D {
+          0% { transform: rotateY(0deg); }
+          100% { transform: rotateY(360deg); }
+
+}
+          .small-icon {
+           width: 100px;
+           height: 50px;
+           margin-top: 10px;
+           height: auto;
+}
+
+           .small-icon2 {
+             width: 160px;
+             height: 160px;
+             margin-top: 60px;
+             margin-bottom: 5px;}
+             
+             .small-icon2:hover {
+              display: flex !important;
+             }
+    
+          .navbar {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           height: 30px;
+           background-color: #400;
+           padding: 0 20px;
+}
+
+        #speechBubble {
+         display: none; 
+        }
+        
+        #speechBubble:target {
+          display: block;  
+        }
+
+.speech-bubble::after {
+    content: '';
+    
+    position: absolute;
+    top: -20px; 
+    right: 50px; 
+    width: 10px;
+    height: 10px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 25px solid black; 
+    rotate: 180deg;
+  }
+          
+       a.link-com-simbolo::after {
+            content: "🌊" ; 
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+       a.link-com-simbolo:hover::after  {
+    opacity: 1;
+    transform: translateX(3px);
+         }
+         
+         
+     
+         
+    </style>
+    </head>
+    
+    <body>
+     
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="https://v1.pinimg.com/videos/mc/720p/f3/54/47/f354474dfc532e6b7162763f18d095ca.mp4" type="video/mp4">
+    
+  </video>
+
+    <div class="barra-superior">
+
+         <nav class="navbar">
+    <a href="https://youtu.be/Td3sjIymItY?si=1YCGm_ilSz45vGbx" class="icon left" target="_blank">
+        <img src="https://i.imgur.com/PU2GjAm.png" class="small-icon" title="cant sleep?" >
+      
+    </a>
+    Stefanys bullshit   🍒
+    <a href="#speechBubble" class="icon right" id="mainIcon">
+        <img src="https://i.imgur.com/xLBWARW.png" class="small-icon2" title="heuheueheu">
+        <div> teste </div>
+    </a>
+    
+</nav>
+</div>
+  
+   <div style="
+    position: fixed; 
+    margin-top: 50px; 
+    right: 2%;
+    background-color: black; 
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: calc(100% - 200px);
+
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;"
+    class="speech-bubble" id="speechBubble">
+
+       <h2 style= margin-left:10px; >Wassup fellas, this is a test</h2>
+       <hr style="width: 94%;">
+       <p style="margin-bottom: 10px; margin-left:10px; max-width: 300px;">I'm Stefany and all this bullshit is mine. I'm a cringey non-chronically online (sadly or gladly) 17y old  with low iron issues and some bad dumb habits.  </p>
+       <p style="margin-bottom: 10px; margin-left: 10px; max-width: 300px;">Hope I don’t forget my Neocities account password again too soon... (I did. Again.)</p>
+       <p style="margin-bottom: 10px; margin-left: 10px; max-width: 300px;">I'm still managing to get the right codes for each case, even though this is meant to be a chaotic neutral page. Soon I'll be doing a comment section if someone wants to give any ideas or suggestions for the page. </p>
+   </div>
+
+  <div class="main">
+
+  <h1>Hi!!!!!! </h1>
+  <img src="https://i.pinimg.com/736x/7a/79/2e/7a792e6104394af5c6321039e6fb839b.jpg" width=780 height=789>
+  <p>Welcoooome <a href="https://findtheinvisiblecow.com" style= "color: red" >Click here and find the cow (or die trying)</a> </p>
+     
+  <g-row>
+  
+    <g-col>
+    
+        <h2>My main interests</h2>
+        <p style="max-width: 1300px; min-width: 500px;">
+            I like playing violin, doing researches on my favorite sports bikes, learning new languages, and drawing sometimes. 
+            However, I wish I could do more, like join some martial arts gym to train Muay Thai, attend to ballet classes, train volleyball, and learn some ballroom dances maybe... 
+        </p>
+        <p style="max-width: 1300px; margin-bottom: 50px;">
+            I have several different interests in various niches.
+        </p>
+        <hr>
+    </g-col>  
+
+    <g-col>
+        <h2>Fun fact</h2>
+       <div style="
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: center; 
+  gap:-30px; 
+  flex-wrap: wrap;
+  padding: 0px;
+  color: white;
+  font-family: sans-serif;
+  width: 600px;
+  max-width: 1300px;
+">
+  <img src="https://imgur.com/Okefiu6.png" 
+       style="width: 430px; height: auto; margin-top: -55px; margin-right: -210px; margin-left: -90px"> 
+
+  <p style="flex: 1; font-size: 16px; line-height: 1.6;">
+    As for the latest atualizations, the YZF-R3 Connected 2026 provides the rider a brand new high-technology system based on comfort improvement, where the seat has been redesigned in order to help the rider's feet reach the ground, the inverted suspension system that provides a better balance between comfort and sports performance and an assisted clutch, providing much more peace of mind with less effort when operating the clutch lever and preventing the rear wheel from locking up during sudden downshifts.
+    <br>
+    Additionally to that, the Bluetooth connectivity feature allows the rider to check the motors RPM, throttle, ECO feature, consumption indicator history per day or month (KM/L), the motors battery status and the last place you parked your bike.
+            The new fairing design closely resembles the YZF-M1 model, with more agressive lines and a more compact headlight system.
+  </p>
+  <img src="https://imgur.com/rYjVM0d.png" 
+       style="width: 110px; margin-left: 10px; margin-right: -170px; margin-top: -14px;">
+       
+</div>
+
+    <g-col>
+        <h2>Another fun fact</h2>
+        <p>Mushrooms kinda look like jellyfishes... If you look very carefully.</p>  
+      
+    </g-col>
+
+    <div style="display: flex; gap: 10px;">
+      <img src="https://i.pinimg.com/1200x/f2/b9/a2/f2b9a2a3da353bc0af3b071186c6f5f3.jpg" style="margin-bottom: 20px" width=780 height=420>
+    </div>
+    <hr>
+   
+      <h2>Top 5 Wave to Earth songs you should definitely listen</h2>
+  <div style="display: flex; align-items: center;">
+  
+        <ol style="display: flex; gap: 100px; max-width: 780px; min-width: 500px">
+     
+            <li><a href="https://youtu.be/VzayimarIog?si=z865fVJ8INoabE05" style="color: red;" class="link-com-simbolo">Holyland</a></li>
+
+            <li><a href="https://youtu.be/nZqwQCLYgjk?si=wmNdpSx18ywwcxFd" style="color: red;" class="link-com-simbolo">Seasons</a></li>
+        
+            <li><a href="https://youtu.be/RxiTWxP9Xf4?si=-Ll-0Ab00yerSzkH" style="color: red;" class="link-com-simbolo">Homesick</a></li>
+      
+            <li><a href="https://youtu.be/ZTcrws9SGCE?si=0ihxWOSvF8Zcejz4" style="color: red;" class="link-com-simbolo">Daisy</a></li>
+        
+            <li><a href="https://youtu.be/t3Lwj7lpZGo?si=2Qx9_5lknRr5x3OJ" style="color: red;" class="link-com-simbolo">Play with earth!</a></li>
+        </ol>
+    
+        </div>
+        
+        <a href="https://youtube.com" class="floating-icon2">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
+        
+        <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
+        
+        <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
+        
+        <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
+        
+        <a href="https://youtube.com" class="floating-icon3">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
+        
+       <img src="https://i.pinimg.com/1200x/c7/05/16/c7051632778319ac2cd2ca868c3ea6a3.jpg" style="width: 780px; height: auto; margin-bottom: 50px;" >
+       
+         <g-col>
+         <hr>
+        <h2>My Stardew Valley's little gay farm economies</h2>
+         <ul> 
+         <br>
+          <li> First of all, my house is already updated to all the three levels, so I have a basement with wooden barrels and a room for my kids (in the first opportunity I'll be throwing them on the sea). I live with my lazy ass programmer husband, bastião (jk he helps me every week with the plantations and animals) and our cat Mitinho. </li>  
+          <br>
+          <li> As for my farm area, I have three deluxe barns, each one has from 8 to 10 cows, pigs and sheeps.   </li>
+          <br>
+          <li> My favourite seasons are autumn and summer, because I can plant starfruits and blueberries </li>
+          <br>
+          <li> As I said in the first version of this website, I HATE interacting to the npc's, Its tiring and boring.  </li>
+        </ul>
+    </g-col>
+    
+       </g-row>
+       </div>
+       <script type="text/javaScript">
+       alerta("Site em teste, algumas funções muito provavelmente não vão funcionar corretamente em dispositivos variados. Vlw tmj ai :)")
+       </script>
+  </html>
+      
