@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<title> This was supposed to be a serious website  </title> 
-<link rel="icon" type="image/png" href="https://i.ibb.co/MD0MCtch/image-removebg-preview-6.png">
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    
+ <head> 
+  <title>This was supposed to be a serious website</title> 
+  <link rel="icon" type="image/png" href="https://i.ibb.co/MD0MCtch/image-removebg-preview-6.png">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+  <style>
     html {
       scroll-behavior: smooth;
     }
-    
-      body {
-      margin: 0;
-      padding: 0;
+
+    body {
       height: 100vh;
-      overflow: auto; 
-      padding-top: 80px; 
+      overflow: auto;
+      padding-top: 80px;
       font-family: Georgia, monospace;
       display: flex;
-      flex-direction: column;
       justify-self: center;
+      flex-direction: column;
+      
+      cursor: url('https://i.imgur.com/lBUqLpr.png'), auto;}
+    
+    .comment {
+      background-color: rgba(10, 10, 10, 0.1);
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
 
+    form {
+      background: rgba(10, 10, 10, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      width: 85%;
+      margin-bottom: -25px;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+       font-family: 'Pixelify Sans';
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: #000066;
+      color: white;
+      font-family: inherit;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #4C4CFF;
     }
 
     .video-bg {
@@ -34,337 +81,522 @@
       z-index: -1;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      padding-top: 150px;
-      min-height: 200vh;
-    }
-    
     .main {
       position: relative;
-      margin-top: 25px;
-      margin-left: 2%;
-      margin-right: auto;
-      background-color: rgba(10, 10, 10, 0.6);
+      margin: 25px 2% 0;
+      background-color: rgba(10, 10, 10, 0.8);
       padding: 25px;
       border-radius: 10px;
+      max-width: 900px;
+      width: 90%;
+    }
+
+    .speechbbubble {
+      position: fixed;
+      margin-top: -375px;
+      right: 2%;
+      background-color: rgba(10, 10, 10, 0.8);
+      padding: 5px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: calc(100% - 200px);
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+
+    .speechbbubble::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: 70px;
+      width: 20px;
+      height: 10px;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 55px solid rgba(10, 10, 10, 0.6);
+      rotate: 180deg;
+      z-index: -1;
+    }
+
+    .speechbbubble11 {
+      position: fixed;
+      margin-top: 50px;
+      left: 2%;
+      background-color: rgba(10, 10, 10, 0.8);
+      padding: 5px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: calc(100% - 200px);
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+
+    .barra-superior {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #400;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+      z-index: 1000;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: justify;
+      font-size: 14px;
+    }
+
+    h1, h2 {
+      color: pink;
+    }
+
+    h3, h4 {
+      font-family: 'Pixelify Sans';
+    }
+
+    h4 {
+      color: white;
+    }
+
+    p {
+      color: gray;
+    }
+
+    li {
+      font-family: 'Pixelify Sans', sans-serif;
+      color: pink;
+      z-index: 1;
+      margin-top: 20px;
+      width: 700px;
+    }
+
+    ol.link-com-simbolo {
+      margin-bottom: 8px;
       max-width: 780px;
-      width: 90%;    
+      font-weight: bold;
     }
-        
-        .barra-superior {position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #400;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
-            z-index: 1000;}
-          
-            
-        body { 
-        }
-            
-        p {
-            line-height: 1.6;
-            text-align: justify;
-            font-size: 14px;}
-        
-             h1,h2 {color: pink;}
-             p, li {color: gray;}
-            
-            ol.link-com-simbolo {
-            margin-bottom: 8px;
-            max-width: 780px;
-            font-weight: bold;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      overflow-x: hidden;
     }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            overflow-x: hidden;}
-            
-        a {
-            position: relative;
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-            transition: color 0.3s;
-        }    
-           @keyframes flutuar {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
-        }
 
-        .floating-icon1 {
-            display: inline-block;
-            margin-left: 120px;
-            width: 40px;
-            animation: flutuar 2s infinite ease-in-out;
-        }
-        .floating-icon2 {
-            display: inline-block;
-            margin-left: 30px;
-            width: 40px;
-            animation: flutuar 2s infinite ease-in-out;
-        }
-        .floating-icon3 {
-            display: inline-block;
-            margin-left: 103px;
-            width: 40px;
-            animation: flutuar 2s infinite ease-in-out;
-        }
-        
+    a {
+      font-family: 'Pixelify Sans', sans-serif;
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
 
-          @keyframes flutuar {
-          0% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0); }
-}
-          .small-icon {
-           animation: flutuar 3s infinite ease-in-out;
-}
+    a.link-com-simbolo::after {
+      content: "🌊";
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      font-size: 12px;
+      margin-left: 10px;
+    }
 
-          @keyframes girar3D {
-          0% { transform: rotateY(0deg); }
-          100% { transform: rotateY(360deg); }
+    a.link-com-simbolo:hover::after {
+      opacity: 1;
+      transform: translateX(3px);
+    }
 
-}
-          .small-icon {
-           width: 100px;
-           height: 50px;
-           margin-top: 10px;
-           height: auto;
-}
+    .efeito-indice {
+      font-family: 'Pixelify Sans', sans-serif;
+      color: #ccc;
+      font-size: 16px;
+      padding: 20px;
+      transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      text-shadow: 0 0 5px #ccc, 0 0 10px #FFC0CB;
+    }
 
-           .small-icon2 {
-             width: 160px;
-             height: 160px;
-             margin-top: 60px;
-             margin-bottom: 5px;}
-             
-             .small-icon2:hover {
-              display: flex !important;
-             }
+    .efeito-indice:hover {
+      transform: scale(1.1);
+      transition: 0.2s ease-in-out;
+    }
+
+    .section {
+      scroll-margin-top: 50vh;
+    }
+
+    .floating-icon1,
+    .floating-icon2,
+    .floating-icon3 {
+      display: inline-block;
+      width: 40px;
+      animation: flutuar 3s infinite ease-in-out;
+    }
+
+    .floating-icon1 {
+      margin-left: 130px;
+    }
+
+    .floating-icon2 {
+      margin-left: 50px;
+    }
+
+    .floating-icon3 {
+      margin-left: 140px;
+    }
+
+    @keyframes flutuar {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .small-icon {
+      width: 100px;
+      margin-top: 10px;
+      height: auto;
+      animation: flutuar 3s infinite ease-in-out;
+    }
+
+    .small-icon2 {
+      width: 160px;
+      height: 160px;
+      margin-top: 60px;
+      margin-bottom: 5px;
+    }
+
+    .small-icon2:hover {
+      display: flex !important;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      background-color: #400;
+      padding: 0 20px;
+    }
+
+    #speechBubble {
+      display: none;
+    }
+
+    #speechBubble:target {
+      display: block;
+    }
+
+    @keyframes girar3D {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+    .buttonrandandan {
+       width: 80px;
+       height: 80px;
+       background: radial-gradient(circle, #333, #000);
+       border: 3px solid #555;
+       border-radius: 50%;
+       color: red;
+       font-size: 16px;
+       cursor: pointer;
+       transition: all 0.3s;
+       box-shadow: 0 0 10px #000;
+       margin-left: 580px;
+       justify-content: center;
+       text-align: center
+    }
     
-          .navbar {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           height: 30px;
-           background-color: #400;
-           padding: 0 20px;
-}
+  </style>
+</head>
 
-        #speechBubble {
-         display: none; 
-        }
-        
-        #speechBubble:target {
-          display: block;  
-        }
-
-.speech-bubble::after {
-    content: '';
-    
-    position: absolute;
-    top: -20px; 
-    right: 50px; 
-    width: 10px;
-    height: 10px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 25px solid black; 
-    rotate: 180deg;
-  }
-          
-       a.link-com-simbolo::after {
-            content: "🌊" ; 
-            position: absolute;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            font-size: 12px;
-            margin-left: 10px;
-        }
-
-       a.link-com-simbolo:hover::after  {
-    opacity: 1;
-    transform: translateX(3px);
-         }
-         
-         
-     
-         
-    </style>
-    </head>
-    
-    <body>
-     
-  <video class="video-bg" autoplay muted loop playsinline>
+   <body>
+  <video class="video-bg" autoplay="" muted="" loop="" playsinline="">
     <source src="https://v1.pinimg.com/videos/mc/720p/f3/54/47/f354474dfc532e6b7162763f18d095ca.mp4" type="video/mp4">
-    
   </video>
 
-    <div class="barra-superior">
+  <div class="barra-superior">
+    <nav class="navbar">
+      <a href="https://youtu.be/Td3sjIymItY?si=1YCGm_ilSz45vGbx" class="icon left" target="_blank">
+        <img src="https://i.imgur.com/PU2GjAm.png" class="small-icon" title="cant sleep?">
+      </a>
+      <div style="display: flex;">
+        <h3>Stefanys bullshit</h3>
+        <img src="https://i.imgur.com/3gNeElO.png" width="80" height="60" style="margin-bottom: 0px; margin-right: 0px;">
+      </div>
+      <a href="#" class="icon right" id="mainIcon">
+        <img src="https://i.imgur.com/xLBWARW.png" class="small-icon2" title="Click me!!" target="_blank">
+      </a>
+    </nav>
+  </div>
 
-         <nav class="navbar">
-    <a href="https://youtu.be/Td3sjIymItY?si=1YCGm_ilSz45vGbx" class="icon left" target="_blank">
-        <img src="https://i.imgur.com/PU2GjAm.png" class="small-icon" title="cant sleep?" >
-      
+  <div class="speechbbubble11">
+    <h2 style="margin-left:10px;">INDEX</h2>
+    <hr style="width: 94%;">
+
+    <a href="#interests">
+      <div class="efeito-indice">My interests and stuff<br></div>
     </a>
-    Stefanys bullshit   🍒
-    <a href="#speechBubble" class="icon right" id="mainIcon">
-        <img src="https://i.imgur.com/xLBWARW.png" class="small-icon2" title="heuheueheu">
-        <div> teste </div>
+    <a href="#funfact1">
+      <div class="efeito-indice">Fun fact!!! New R3 model released this year </div>
     </a>
-    
-</nav>
-</div>
-  
-   <div style="
-    position: fixed; 
-    margin-top: 50px; 
-    right: 2%;
-    background-color: black; 
-    padding: 5px;
-    border-radius: 10px;
-    max-width: 300px;
-    width: calc(100% - 200px);
+    <a href="#anodaone">
+      <div class="efeito-indice">Another fun fact</div>
+    </a>
+    <a href="#w2earth">
+      <div class="efeito-indice">W2E playlist</div>
+    </a>
+    <a href="#stardew">
+      <div class="efeito-indice">My stardew valley's little gay farm :P</div>
+    </a>
 
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;"
-    class="speech-bubble" id="speechBubble">
+    <div class="speechbbubble">
+      <h2 style="margin-left:10px;">Wassup fellas, this is a test</h2>
+      <hr style="width: 94%;">
+      <p id="typewriterText" style="margin-left: 10px; max-width: 380px; margin-bottom: -20px;">
 
-       <h2 style= margin-left:10px; >Wassup fellas, this is a test</h2>
-       <hr style="width: 94%;">
-       <p style="margin-bottom: 10px; margin-left:10px; max-width: 300px;">I'm Stefany and all this bullshit is mine. I'm a cringey non-chronically online (sadly or gladly) 17y old  with low iron issues and some bad dumb habits.  </p>
-       <p style="margin-bottom: 10px; margin-left: 10px; max-width: 300px;">Hope I don’t forget my Neocities account password again too soon... (I did. Again.)</p>
-       <p style="margin-bottom: 10px; margin-left: 10px; max-width: 300px;">I'm still managing to get the right codes for each case, even though this is meant to be a chaotic neutral page. Soon I'll be doing a comment section if someone wants to give any ideas or suggestions for the page. </p>
-   </div>
+      <div class="comment">
+        <form action="https://formsubmit.co/stefanylararegis@gmail.com" method="POST" id="commentForm">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <img src="https://i.imgur.com/sF8wm40.png" width="100" height="90" style="margin-top: -15px;">
+            <h4 style="margin: 0 auto;">Leave a comment!!</h4>
+            <img src="https://i.imgur.com/sF8wm40.png" width="100" height="90" style="margin-top: -15px;">
+          </div>
+          <input type="text" name="nome" placeholder="Name" required="">
+          <input type="email" name="email" placeholder="Email" required="">
+          <textarea name="mensagem" rows="5" placeholder="Your message here :)" required=""></textarea>
+          <button type="submit">Submit</button>
+          
+  <div id="commentBox"></div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="main">
-
-  <h1>Hi!!!!!! </h1>
-  <img src="https://i.pinimg.com/736x/7a/79/2e/7a792e6104394af5c6321039e6fb839b.jpg" width=780 height=789>
-  <p>Welcoooome <a href="https://findtheinvisiblecow.com" style= "color: red" >Click here and find the cow (or die trying)</a> </p>
-     
-  <g-row>
-  
-    <g-col>
+  <div style= "background-color: rgba(10, 10, 10, 0.6);">
+    <h1>Hi!!!!!!</h1>
+    <img src="https://i.pinimg.com/736x/7a/79/2e/7a792e6104394af5c6321039e6fb839b.jpg" width="900" height="789">
+    <p>Welcoooome <a href="https://findtheinvisiblecow.com" style="color: red">Click here and find the cow (or die trying)</a></p>
     
-        <h2>My main interests</h2>
-        <p style="max-width: 1300px; min-width: 500px;">
-            I like playing violin, doing researches on my favorite sports bikes, learning new languages, and drawing sometimes. 
-            However, I wish I could do more, like join some martial arts gym to train Muay Thai, attend to ballet classes, train volleyball, and learn some ballroom dances maybe... 
-        </p>
-        <p style="max-width: 1300px; margin-bottom: 50px;">
+    <g-row>
+      <g-col>
+        <section id="interests" class="section">
+          <h2>Interests and stuff</h2>
+          <p style="max-width: 1300px; min-width: 500px;">
+            Im a multifunctional person I guess, a have lots of hobbys like drawing, reading, playinh violin and ukulele, studying random cool topics, going on rides on my bike, doing crochet and sewing stuff, baking cookies and cakes and playing stardew valley. Though obviously I cant do it all when I want to... I still would like to do more, like do gardening and take care of plants (I wish i had a big BIG garden with pink roses and hydrangeas, daisies and lotuses), train Muay Thai and attend to ballet classes (kinda controversal Ik).
+          </p>
+          <p style="max-width: 1300px; margin-bottom: 50px;">
             I have several different interests in various niches.
-        </p>
-        <hr>
-    </g-col>  
+          </p>
+          <hr>
+        </section>
+      </g-col>
+      </div>
 
-    <g-col>
-        <h2>Fun fact</h2>
-       <div style="
-  display: flex; 
-  align-items: flex-start; 
-  justify-content: center; 
-  gap:-30px; 
-  flex-wrap: wrap;
-  padding: 0px;
-  color: white;
-  font-family: sans-serif;
-  width: 600px;
-  max-width: 1300px;
-">
-  <img src="https://imgur.com/Okefiu6.png" 
-       style="width: 430px; height: auto; margin-top: -55px; margin-right: -210px; margin-left: -90px"> 
-
-  <p style="flex: 1; font-size: 16px; line-height: 1.6;">
-    As for the latest atualizations, the YZF-R3 Connected 2026 provides the rider a brand new high-technology system based on comfort improvement, where the seat has been redesigned in order to help the rider's feet reach the ground, the inverted suspension system that provides a better balance between comfort and sports performance and an assisted clutch, providing much more peace of mind with less effort when operating the clutch lever and preventing the rear wheel from locking up during sudden downshifts.
-    <br>
-    Additionally to that, the Bluetooth connectivity feature allows the rider to check the motors RPM, throttle, ECO feature, consumption indicator history per day or month (KM/L), the motors battery status and the last place you parked your bike.
-            The new fairing design closely resembles the YZF-M1 model, with more agressive lines and a more compact headlight system.
-  </p>
-  <img src="https://imgur.com/rYjVM0d.png" 
-       style="width: 110px; margin-left: 10px; margin-right: -170px; margin-top: -14px;">
+<div style= "background-color: rgba(10, 10, 10, 0.6);">
+      <g-col>
        
-</div>
-
-    <g-col>
-        <h2>Another fun fact</h2>
-        <p>Mushrooms kinda look like jellyfishes... If you look very carefully.</p>  
-      
-    </g-col>
-
-    <div style="display: flex; gap: 10px;">
-      <img src="https://i.pinimg.com/1200x/f2/b9/a2/f2b9a2a3da353bc0af3b071186c6f5f3.jpg" style="margin-bottom: 20px" width=780 height=420>
-    </div>
-    <hr>
-   
-      <h2>Top 5 Wave to Earth songs you should definitely listen</h2>
-  <div style="display: flex; align-items: center;">
-  
-        <ol style="display: flex; gap: 100px; max-width: 780px; min-width: 500px">
-     
-            <li><a href="https://youtu.be/VzayimarIog?si=z865fVJ8INoabE05" style="color: red;" class="link-com-simbolo">Holyland</a></li>
-
-            <li><a href="https://youtu.be/nZqwQCLYgjk?si=wmNdpSx18ywwcxFd" style="color: red;" class="link-com-simbolo">Seasons</a></li>
-        
-            <li><a href="https://youtu.be/RxiTWxP9Xf4?si=-Ll-0Ab00yerSzkH" style="color: red;" class="link-com-simbolo">Homesick</a></li>
-      
-            <li><a href="https://youtu.be/ZTcrws9SGCE?si=0ihxWOSvF8Zcejz4" style="color: red;" class="link-com-simbolo">Daisy</a></li>
-        
-            <li><a href="https://youtu.be/t3Lwj7lpZGo?si=2Qx9_5lknRr5x3OJ" style="color: red;" class="link-com-simbolo">Play with earth!</a></li>
-        </ol>
-    
+          <h2>Fun facts about the YZF-R3 ABS Connected 2026!! </h2>
+           <h4 style="margin-left: 450px; margin-bottom: -20px; margin-top: 50px;"> MY BABY ♥️</h4>
+        <div style="display: flex; justify-content: center; gap:10px; flex-wrap: wrap; padding: 0px; color: white; font-family: sans-serif; width: 100%; max-width: 1300px;">
+        <button onclick="playMotorSound()" class="buttonrandandan">
+              <p style= "color: red; margin: -10px -14px; text-align: center;"> ENGINE <br> START </p>
+        </button>
+        <audio id="motorSound" src="https://audio.jukehost.co.uk/HvalOLXSdD23vDH8M30aHqvzc6DnsBQN"></audio>
+          
+            <section id="funfact1" class="section">
+          <img src="https://i.imgur.com/TVUPrj9.png" style="max-width: 800px; height: auto; margin-top: -30px; margin-right: 80px; margin-left: 100px;">
+            </section>
+          <img src="https://i.imgur.com/eWUy8bq.png" style="width: 1500px; height: auto; margin-top: -11px; margin-right: 80px; margin-left: 100px;">
+            <img src="https://i.imgur.com/NpUy2bB.png" style="width: 800px; height: auto; margin-top: -11px; margin-right: 80px; margin-left: 100px;">
+          <img src="https://i.imgur.com/ps79fn6.png" style="width: 160px; height: auto; margin-top: 0px; margin-right: 10px; margin-left: -120px">
+       
+          <hr>
+          <p style="flex: 1; font-size: 16px; line-height: 1.6;">
+            As for the latest atualizations, the YZF-R3 Connected 2026 provides the rider a brand new high-technology system based on comfort improvement, where the seat has been redesigned in order to help the rider's feet reach the ground, the inverted suspension system that provides a better balance between comfort and sports performance and an assisted clutch, providing much more peace of mind with less effort when operating the clutch lever and preventing the rear wheel from locking up during sudden downshifts.
+            <br>
+            Additionally to that, the Bluetooth connectivity feature allows the rider to check the motors RPM, throttle, ECO feature, consumption indicator history per day or month (KM/L), the motors battery status and the last place you parked your bike.
+            The new fairing design closely resembles the YZF-M1 model, with more agressive lines and a more compact headlight system. 
+            <br>
+            Particularly, its my favorite bike of all, has a medium engine power that guarantees a great top speed and comfort simultaneously, has a beatiful fairing work, ideal dimensions and height for short people, easy maneuver and conduction technics, 
+          </p>
+          <br>
+          <hr>
+          <img src="https://i.imgur.com/mn5knyp.png" style="width: 140px; margin-left: 10px; margin-right: -110px; margin-top: -10px;">
         </div>
-        
-        <a href="https://youtube.com" class="floating-icon2">
-        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
-        
-        <a href="https://youtube.com" class="floating-icon1">
-        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
-        
-        <a href="https://youtube.com" class="floating-icon1">
-        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
-        
-        <a href="https://youtube.com" class="floating-icon1">
-        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
-        
+      </g-col>
+</div>
+      <br><br>
+<div style= "background-color: rgba(10, 10, 10, 0.6);">
+      <g-col>
+        <h2>Another fun fact</h2>
+        <p>Mushrooms kinda look like jellyfishes... If you look very carefully.</p>
+      </g-col>
+
+      <section id="anodaone" class="section">
+        <div style="display: flex; gap: 10px;">
+          <img src="https://i.pinimg.com/1200x/f2/b9/a2/f2b9a2a3da353bc0af3b071186c6f5f3.jpg" style="margin-bottom: 20px" width="780" height="420">
+        </div>
+      </section>
+</div>
+      <hr>
+<div style= "background-color: rgba(10, 10, 10, 0.6);">
+      <section id="w2earth" class="section">
+        <h2>Top 5 Wave to Earth songs you should definitely listen</h2>
+        <div style="display: flex; align-items: center;">
+          <ol style="display: flex; gap: 100px; max-width: 800px; min-width: 500px">
+            <li><a href="https://youtu.be/VzayimarIog?si=z865fVJ8INoabE05" style="color: red;" class="link-com-simbolo">Holyland</a></li>
+            <li><a href="https://youtu.be/nZqwQCLYgjk?si=wmNdpSx18ywwcxFd" style="color: red;" class="link-com-simbolo">Seasons</a></li>
+            <li><a href="https://youtu.be/RxiTWxP9Xf4?si=-Ll-0Ab00yerSzkH" style="color: red;" class="link-com-simbolo">Homesick</a></li>
+            <li><a href="https://youtu.be/ZTcrws9SGCE?si=0ihxWOSvF8Zcejz4" style="color: red;" class="link-com-simbolo">Daisy</a></li>
+            <li><a href="https://youtu.be/t3Lwj7lpZGo?si=2Qx9_5lknRr5x3OJ" style="color: red;" class="link-com-simbolo">Play with earth!</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <a href="https://youtube.com" class="floating-icon2">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50">
+      </a>
+
+      <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50">
+      </a>
+
+      <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50">
+      </a>
+
+      <a href="https://youtube.com" class="floating-icon1">
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50">
+      </a>
+      
         <a href="https://youtube.com" class="floating-icon3">
-        <img src="https://i.imgur.com/lTy9n2A.png" width="50"> </a>
-        
-       <img src="https://i.pinimg.com/1200x/c7/05/16/c7051632778319ac2cd2ca868c3ea6a3.jpg" style="width: 780px; height: auto; margin-bottom: 50px;" >
-       
+        <img src="https://i.imgur.com/lTy9n2A.png" width="50">
+      </a>
+
+       <img src="https://i.pinimg.com/1200x/c7/05/16/c7051632778319ac2cd2ca868c3ea6a3.jpg" style="width: 780px; height: auto; margin-bottom: 50px;">
+        </div>
          <g-col>
          <hr>
+         <div style= "background-color: rgba(10, 10, 10, 0.6);">
+          <section id="stardew" class="section">
         <h2>My Stardew Valley's little gay farm economies</h2>
+         </section>
          <ul> 
          <br>
-          <li> First of all, my house is already updated to all the three levels, so I have a basement with wooden barrels and a room for my kids (in the first opportunity I'll be throwing them on the sea). I live with my lazy ass programmer husband, bastião (jk he helps me every week with the plantations and animals) and our cat Mitinho. </li>  
-          <br>
-          <li> As for my farm area, I have three deluxe barns, each one has from 8 to 10 cows, pigs and sheeps.   </li>
-          <br>
-          <li> My favourite seasons are autumn and summer, because I can plant starfruits and blueberries </li>
-          <br>
-          <li> As I said in the first version of this website, I HATE interacting to the npc's, Its tiring and boring.  </li>
+         <div style="
+          display: flex; 
+          justify-content: center; 
+          gap: 10px; 
+          flex-wrap: wrap;
+          padding: 0px;
+          color: white;
+          font-family: sans-serif;
+          z-index: 0;
+          "> 
+
+         <img src="https://i.imgur.com/GzdEjS0.png" style="max-width: 470px; height: 260; margin-left: -10px;"> 
+        
+        <img src="https://i.imgur.com/MZE6DIU.png" style="width: 160px; height: 150px; margin-right: -9px; "> 
+       
+        
+          <li style="index: 2; width: 600px; margin-left: -80px; margin-top: 250px; background-color:#d9a963; border: 4px solid #A85C1B; color: #4E2B1A; font-family: 'Verdana', sans-serif; padding: 16px; border-radius: 8px;  font-family: 'Pixelify Sans', cursive; font-size: 14px; line-height: 1.9; justify-content: center;"> First of all, my house is already updated to all the three levels, so I have a basement with wooden barrels and a room for my kids (in the first opportunity I'll be throwing them on the sea). I live with my lazy ass programmer husband, bastião (jk he helps me every week with the plantations and animals) and our cat Mitinho. 
+          
+           As for my farm area, I have three deluxe barns, each one has from 8 to 10 cows, pigs and sheeps. A greenhouse (where i plant mainly starfruits and pumpkins).    
+          
+           My favourite seasons are fall and winter, i love attending to the night market and the jellyfish event, such as the egg festival, desert festival and stuff.  
+        
+           As I said in the first version of this website, I HATE interacting to the npc's, Its tiring and boring, im too lazy to go searching their fav gifts.  </li>
+           
+          </div>
         </ul>
+      
+        <img src="https://i.imgur.com/HllVT3h.png" style="z-index: 1; width: 750px; height: auto; margin-top: -570px; margin-right: 0px; margin-left: 50px;">
+       
+        <img src="https://i.imgur.com/xTqo7cZ.gif" style="max-width: 60px; height: 60px; margin-top: 0px; margin-right: 0px; margin-left: 200px; z-index: 2;">
+       
+         <img src="https://i.imgur.com/xTqo7cZ.gif" style=" max-width: 60px; height: 60px; margin-top: -60px; margin-right: 30px; margin-left: 0px; z-index: 2;">
+        
+         <img src="https://i.imgur.com/xTqo7cZ.gif" style="max-width: 60px; height: 60px; margin-top: -60px; margin-right: 0px; margin-left: 600px; z-index: 2;">
+       
+       <img src="https://i.imgur.com/xTqo7cZ.gif" style="max-width: 60px; height: 60px; margin-top: -60px; margin-right: 0px; margin-left: 790px; z-index: 2;">
+    
+        <img src="https://i.imgur.com/wNNe4Ta.png" style="width: 500px; height: 280px; margin-top: -80px; margin-right: 0px; margin-left: 170px; z-index: 2;">
+      </div>
     </g-col>
     
-       </g-row>
-       </div>
+    <g-rol>
+    <hr>
+   
+     </g-rol>
+    </g-row>
+       <script>
+  function playMotorSound() {
+    const audio = document.getElementById('motorSound');
+    audio.currentTime = 0; // Reinicia o som se já estiver tocando
+    audio.play();
+  }
+</script>
        <script type="text/javaScript">
        alerta("Site em teste, algumas funções muito provavelmente não vão funcionar corretamente em dispositivos variados. Vlw tmj ai :)")
        </script>
-  </html>
-      
+       
+          <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> 
+    (function() {
+      emailjs.init("rHnQu1aG9yPLc4yNx"); 
+    })(); </script>
+  
+          <script>
+    const form = document.getElementById('commentForm');
+    const commentBox = document.getElementById('commentBox');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && message && email) {
+        emailjs.send("service_ih5m10q", "template_k6j3twk" {
+          name: name,
+          email: email,
+          message: message
+        }).then(function(response) {
+          console.log("E-mail enviado com sucesso!", response.status, response.text);
+
+          const commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+          commentDiv.innerHTML = `<strong>${name}</strong><br>${message}`;
+          commentBox.prepend(commentDiv);
+
+          form.reset();
+          </script>
+
+          <script>
+  const text = `I'm Stefany and all this bullshit is mine. I'm a cringey non-chronically online (sadly or gladly) 17y old with low iron issues and some bad dumb habits. Hope I don’t forget my Neocities account password again too soon... (I did. for the third time.)      
+               I'm still managing to get the right codes for each case, even though this is meant to be a neutral chaotic page. Feel free to submit any questions or sugestions on the section bellow, thanks!!.` ;
+
+  const el = document.getElementById('typewriterText');
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i) === '\n' ? '<br><br>' : text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 1); 
+    }
+  }
+  
+  typeWriter();
+          </script>
+       </div>
+    </body>
+ </html>
